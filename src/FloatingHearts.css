@@ -1,0 +1,33 @@
+.hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+  .heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: pink;
+    clip-path: path('M10 30 C 20 0, 40 0, 50 30 C 50 50, 25 70, 10 50 C -5 70, -30 50, -30 30 C -20 0, 0 0, 10 30 Z');
+    opacity: 0.6;
+    animation: floatUp linear infinite;
+    transform: rotate(45deg);
+  }
+  
+  @keyframes floatUp {
+    from {
+      transform: translateY(100vh) rotate(0deg);
+      opacity: 0.6;
+    }
+    to {
+      transform: translateY(-10vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
